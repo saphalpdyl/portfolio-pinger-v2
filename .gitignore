@@ -1,3 +1,5 @@
 cmake-build-debug/
+vcpkg_installed/
+CMakeFiles/
 
 test.config.json
