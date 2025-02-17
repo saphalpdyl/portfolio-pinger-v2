@@ -7,10 +7,13 @@ add_executable(portfolio_pinger main.cpp
         ConfigurationManager.cpp
         ConfigurationManager.h
         constants.h
-        errors.h)
+        errors.h
+        Configuration.h
+        ProcessTarget.h
+        ProcessTargetResult.h)
 
 find_package(curlcpp CONFIG REQUIRED)
 target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp)
 
 find_package(nlohmann_json CONFIG REQUIRED)
-target_link_libraries(main PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(portfolio_pinger PRIVATE nlohmann_json::nlohmann_json)
