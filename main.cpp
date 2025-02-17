@@ -1,4 +1,3 @@
-#include <iostream>
 #include <curlcpp/curl_easy.h>
 
 using curl::curl_easy;
