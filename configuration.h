@@ -4,9 +4,9 @@
 #include <string>
 
 struct Configuration {
-    std::string targetURL;
-    std::string authorizationSecret;
-    int pingInterval;
+    std::string target_url;
+    std::string authorization_secret;
+    int ping_interval;
 };
 
 #endif //CONFIGURATION_H

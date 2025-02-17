@@ -1,9 +1,9 @@
 #ifndef PROCESSTARGETRESULT_H
 #define PROCESSTARGETRESULT_H
-#include "ProcessTarget.h"
+#include "process_target.h"
 
 struct ProcessTargetResult: ProcessTarget {
-    bool isRunning;
+    bool is_running{};
 };
 
 #endif //PROCESSTARGETRESULT_H

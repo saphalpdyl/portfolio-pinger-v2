@@ -4,13 +4,14 @@ project(portfolio_pinger)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(portfolio_pinger main.cpp
-        ConfigurationManager.cpp
-        ConfigurationManager.h
+        configuration_manager.cpp
+        configuration_manager.h
         constants.h
         errors.h
-        Configuration.h
-        ProcessTarget.h
-        ProcessTargetResult.h)
+        configuration.h
+        process_target.h
+        process_target_result.h
+)
 
 find_package(curlcpp CONFIG REQUIRED)
 target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp)

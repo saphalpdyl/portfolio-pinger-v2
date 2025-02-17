@@ -4,8 +4,8 @@
 #include <string>
 
 struct ProcessTarget {
-    std::string applicationName;
-    std::string processName;
+    std::string application_name;
+    std::string process_name;
 };
 
 #endif //PROCESSTARGET_H
