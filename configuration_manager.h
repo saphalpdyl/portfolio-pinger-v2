@@ -13,9 +13,9 @@ using namespace nlohmann;
 class ConfigurationManager {
 public:
     ConfigurationManager(const std::string& config_file_name, const std::string& config_dir);
-    ~ConfigurationManager();
 
     PingerResult load_file();
+    PingerResult deserialize_configuration();
     PingerResult parse_configuration();
     [[nodiscard]] std::shared_ptr<Configuration> get_configuration() const;
 
@@ -30,7 +30,8 @@ private:
     std::string _config_file_name;
     std::string _config_dir;
     std::string _raw_config;
-    Configuration* _config;
+    std::unique_ptr<json> _serialized_config;
+    std::shared_ptr<Configuration> _config;
 };
 
 
