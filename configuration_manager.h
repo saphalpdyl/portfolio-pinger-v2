@@ -9,6 +9,7 @@
 using namespace nlohmann;
 
 class ConfigurationManager {
+public:
     ConfigurationManager(const std::string& config_file_name, const std::string& config_dir);
 
     PingerResult load_configuration() const;
