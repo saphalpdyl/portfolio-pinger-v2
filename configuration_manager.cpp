@@ -11,6 +11,12 @@ ConfigurationManager::ConfigurationManager(
 ) {
     _config_file_name = config_file_name;
     _config_dir = config_dir;
+    _config = nullptr;
+}
+
+ConfigurationManager::~ConfigurationManager()
+{
+    delete _config;
 }
 
 PingerResult ConfigurationManager::load_file()
@@ -47,4 +53,14 @@ PingerResult ConfigurationManager::parse_configuration()
     }
 
     return PingerResult::OK;
+}
+
+std::shared_ptr<Configuration> ConfigurationManager::get_configuration() const
+{
+    if ( _config != nullptr )
+    {
+        return std::make_shared<Configuration>(*_config);
+    }
+
+    return nullptr;
 }
