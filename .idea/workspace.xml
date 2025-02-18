@@ -137,7 +137,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.portfolio_pinger">
+  <component name="RunManager" selected="Google Test.GoogleTests_run">
     <configuration name="GoogleTests_run" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="portfolio_pinger" TARGET_NAME="GoogleTests_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="portfolio_pinger" RUN_TARGET_NAME="GoogleTests_run" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
