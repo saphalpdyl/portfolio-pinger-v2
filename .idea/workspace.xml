@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/Housekeeping/RefactoringsMru/RenameRefactoring/DoRenameFile/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="portfolio_pinger" targetName="GoogleTests_run" />
+      <config projectName="portfolio_pinger" targetName="portfolio_pinger" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/saphal69/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0bb752a-3024-4c47-be3f-0f9f9aeb41a4" name="Changes" comment="add: configure vcpkg integration and update CMakeLists.txt">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_manager_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_manager_test.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="saphalpdyl &lt;saphalpdyl@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;saphalpdyl&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/saphalpdyl/portoflio-pinger-v2.git&quot;,
+    &quot;accountId&quot;: &quot;cf56238b-8200-46e7-8437-ca755b0eb407&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/process_target.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="e12BVQXX" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="3.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2t9i7m2LlSaMeaXo9xXWF5zoeW4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.main_test.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.portfolio_pinger.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.portfolio_pinger.executor&quot;: &quot;Debug&quot;,
+    &quot;Google Test.ConfigurationManager.ParseConfigurationWithEmptyConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.ConfigurationManager.ParseConfigurationWithInvalidJSON.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.ConfigurationManager.ParseConfigurationWithMissingTargetURL.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.GoogleTests_run.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/saphal69/programming/cpp/07-portfolio-pinger-daemon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/saphal69/programming/cpp/07-portfolio-pinger-daemon/main.cpp&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C/C++&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="CMake Application.portfolio_pinger">
+    <configuration name="GoogleTests_run" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="portfolio_pinger" TARGET_NAME="GoogleTests_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="portfolio_pinger" RUN_TARGET_NAME="GoogleTests_run" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="portfolio_pinger" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="portfolio_pinger" TARGET_NAME="portfolio_pinger" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="portfolio_pinger" RUN_TARGET_NAME="portfolio_pinger">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.portfolio_pinger" />
+      <item itemvalue="Google Test.GoogleTests_run" />
+    </list>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0bb752a-3024-4c47-be3f-0f9f9aeb41a4" name="Changes" comment="" />
+      <created>1739770525742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739770525742</updated>
+      <workItem from="1739770527343" duration="284000" />
+      <workItem from="1739770818317" duration="6158000" />
+      <workItem from="1739806515461" duration="14816000" />
+      <workItem from="1739827536186" duration="3684000" />
+    </task>
+    <task id="LOCAL-00001" summary="add: initial commit">
+      <option name="closed" value="true" />
+      <created>1739774199314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739774199314</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change: dummy mistake to have implementation in header file">
+      <option name="closed" value="true" />
+      <created>1739774767648</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739774767648</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: update CMakeLists.txt with nlohman_json library">
+      <option name="closed" value="true" />
+      <created>1739774849471</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739774849471</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: update CMakeLists.txt with nlohmann_json library">
+      <option name="closed" value="true" />
+      <created>1739774856704</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739774856704</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor: removed the example curl_easy code in main.cpp">
+      <option name="closed" value="true" />
+      <created>1739775044092</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739775044092</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: dumb stuff">
+      <option name="closed" value="true" />
+      <created>1739775259123</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739775259123</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add: copying structs from their C# equivalent">
+      <option name="closed" value="true" />
+      <created>1739776196734</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739776196734</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor: removed the obnoxious &quot;Created by&quot; template on the top of each file">
+      <option name="closed" value="true" />
+      <created>1739776266417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739776266417</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: changes in naming convention to snake_case">
+      <option name="closed" value="true" />
+      <created>1739776859520</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739776859520</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor: changes in naming convention to snake_case">
+      <option name="closed" value="true" />
+      <created>1739776890381</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739776890381</updated>
+    </task>
+    <task id="LOCAL-00011" summary="refactor: changes in naming convention to snake_case">
+      <option name="closed" value="true" />
+      <created>1739776893731</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739776893731</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: better error handling and missing parameters">
+      <option name="closed" value="true" />
+      <created>1739808342941</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739808342941</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add: tests for configuration manager">
+      <option name="closed" value="true" />
+      <created>1739814390639</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739814390639</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add: internal configuration pointer and getter">
+      <option name="closed" value="true" />
+      <created>1739815004107</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739815004107</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor: enhance configuration parsing and error handling">
+      <option name="closed" value="true" />
+      <created>1739821346869</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739821346869</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add: configure vcpkg integration and update CMakeLists.txt">
+      <option name="closed" value="true" />
+      <created>1739835404709</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739835404709</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: initial commit" />
+    <MESSAGE value="change: dummy mistake to have implementation in header file" />
+    <MESSAGE value="chore: update CMakeLists.txt with nlohman_json library" />
+    <MESSAGE value="chore: update CMakeLists.txt with nlohmann_json library" />
+    <MESSAGE value="refactor: removed the example curl_easy code in main.cpp" />
+    <MESSAGE value="refactor: dumb stuff" />
+    <MESSAGE value="add: copying structs from their C# equivalent" />
+    <MESSAGE value="refactor: removed the obnoxious &quot;Created by&quot; template on the top of each file" />
+    <MESSAGE value="refactor: changes in naming convention to snake_case" />
+    <MESSAGE value="refactor: better error handling and missing parameters" />
+    <MESSAGE value="add: tests for configuration manager" />
+    <MESSAGE value="add: internal configuration pointer and getter" />
+    <MESSAGE value="refactor: enhance configuration parsing and error handling" />
+    <MESSAGE value="add: configure vcpkg integration and update CMakeLists.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: configure vcpkg integration and update CMakeLists.txt" />
+  </component>
+</project>

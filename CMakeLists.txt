@@ -4,18 +4,6 @@ project(portfolio_pinger)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 20)
 
-# Set the vcpkg toolchain file
-set(CMAKE_TOOLCHAIN_FILE "~/vcpkg/scripts/buildsystems/vcpkg.cmake"
-        CACHE STRING "Vcpkg toolchain file")
-
-# Set the vcpkg installation directory (optional)
-set(VCPKG_INSTALLED_DIR "${CMAKE_SOURCE_DIR}/vcpkg_installed"
-        CACHE STRING "Vcpkg installed directory")
-
-include_directories("${VCPKG_INSTALLED_DIR}/x64-linux/include")
-link_directories("${VCPKG_INSTALLED_DIR}/x64-linux/lib")
-
-
 # Add executables
 add_executable(portfolio_pinger main.cpp
         configuration_manager.cpp
@@ -29,6 +17,7 @@ add_executable(portfolio_pinger main.cpp
 
 add_executable(
         GoogleTests_run
+        main_test.cpp
         configuration_manager_test.cpp
         configuration_manager.h
         configuration_manager.cpp
@@ -36,10 +25,9 @@ add_executable(
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
 # Link libraries (vcpkg will handle finding these)
-
 find_package(GTest REQUIRED)
 find_package(nlohmann_json REQUIRED)
 find_package(curlcpp REQUIRED)
 
-target_link_libraries(portfolio_pinger PRIVATE curlcpp nlohmann_json)
+target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp nlohmann_json::nlohmann_json)
 target_link_libraries(GoogleTests_run PRIVATE GTest::GTest GTest::gtest_main)
