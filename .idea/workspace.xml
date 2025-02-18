@@ -31,12 +31,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0bb752a-3024-4c47-be3f-0f9f9aeb41a4" name="Changes" comment="add: configure vcpkg integration and update CMakeLists.txt">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_manager_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_manager_test.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="c0bb752a-3024-4c47-be3f-0f9f9aeb41a4" name="Changes" comment="update: remove hardcoded vcpkg commit hash from test.yml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,14 +69,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager_test.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/process_target.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
@@ -173,7 +162,7 @@
       <workItem from="1739770527343" duration="284000" />
       <workItem from="1739770818317" duration="6158000" />
       <workItem from="1739806515461" duration="14816000" />
-      <workItem from="1739827536186" duration="3684000" />
+      <workItem from="1739827536186" duration="4020000" />
     </task>
     <task id="LOCAL-00001" summary="add: initial commit">
       <option name="closed" value="true" />
@@ -303,7 +292,31 @@
       <option name="project" value="LOCAL" />
       <updated>1739835404709</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add: update CMakeLists.txt for vcpkg integration and add test configuration">
+      <option name="closed" value="true" />
+      <created>1739837577001</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739837577001</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update: vcpkg github actions required commit hash instead of tag version">
+      <option name="closed" value="true" />
+      <created>1739837709907</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1739837709907</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update: remove hardcoded vcpkg commit hash from test.yml">
+      <option name="closed" value="true" />
+      <created>1739837841637</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1739837841637</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +353,9 @@
     <MESSAGE value="add: internal configuration pointer and getter" />
     <MESSAGE value="refactor: enhance configuration parsing and error handling" />
     <MESSAGE value="add: configure vcpkg integration and update CMakeLists.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: configure vcpkg integration and update CMakeLists.txt" />
+    <MESSAGE value="add: update CMakeLists.txt for vcpkg integration and add test configuration" />
+    <MESSAGE value="update: vcpkg github actions required commit hash instead of tag version" />
+    <MESSAGE value="update: remove hardcoded vcpkg commit hash from test.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: remove hardcoded vcpkg commit hash from test.yml" />
   </component>
 </project>
