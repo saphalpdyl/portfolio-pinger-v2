@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Add executables
 add_executable(portfolio_pinger main.cpp
+        logger.h
+        logger.cpp
         configuration_manager.cpp
         configuration_manager.h
         constants.h
@@ -25,8 +27,8 @@ add_executable(
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
 # Link libraries (vcpkg will handle finding these)
-find_package(GTest REQUIRED)
 find_package(nlohmann_json REQUIRED)
+find_package(GTest REQUIRED)
 find_package(curlcpp REQUIRED)
 
 target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp nlohmann_json::nlohmann_json)
