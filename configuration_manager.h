@@ -11,7 +11,18 @@
 
 using namespace nlohmann;
 
-class ConfigurationManager {
+class IConfigurationManager {
+public:
+    IConfigurationManager() = default;
+    virtual ~IConfigurationManager() = default;
+
+    [[nodiscard]] virtual std::shared_ptr<Configuration> get_configuration() const = 0;
+
+protected:
+    std::shared_ptr<Configuration> _config;
+};
+
+class ConfigurationManager final : public IConfigurationManager{
 public:
     ConfigurationManager(
         ILogger &logger,
@@ -24,10 +35,11 @@ public:
     PingerResult load_file();
     PingerResult deserialize_configuration();
     PingerResult parse_configuration();
-    [[nodiscard]] std::shared_ptr<Configuration> get_configuration() const;
+
+    [[nodiscard]] std::shared_ptr<Configuration> get_configuration() const override;
 
 #ifdef TESTING
-    inline void set_raw_config(const std::string& raw_config)
+    void set_raw_config(const std::string& raw_config)
     {
         _raw_config = raw_config;
     }
@@ -38,7 +50,6 @@ private:
     std::string _config_dir;
     std::string _raw_config;
     std::unique_ptr<json> _serialized_config;
-    std::shared_ptr<Configuration> _config;
 
     ILogger& _logger;
 };
