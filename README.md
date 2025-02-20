@@ -17,3 +17,5 @@ The application monitors specified processes on my local machine and sends heart
 - Sends HTTP POST requests to the Vercel endpoint
 - Includes the HMAC signature in request payload
 - Maintains a 2-second heartbeat interval between requests
+
+[![Tech Stack](https://skillicons.dev/icons?i=cpp,cmake)]()
