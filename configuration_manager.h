@@ -19,6 +19,8 @@ public:
         const std::string &config_dir
     );
 
+    explicit ConfigurationManager(ILogger &logger);
+
     PingerResult load_file();
     PingerResult deserialize_configuration();
     PingerResult parse_configuration();

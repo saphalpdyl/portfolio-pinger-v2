@@ -16,5 +16,7 @@ int main() {
     Logger logger(LoggerMode::CONSOLE);
     logger.log(LOG_INFO, "Starting up...");
 
+    // Dependency injection
+    ConfigurationManager config_manager(logger);
     return 0;
 }
