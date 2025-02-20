@@ -7,12 +7,17 @@
 
 #include "configuration.h"
 #include "errors.h"
+#include "logger.h"
 
 using namespace nlohmann;
 
 class ConfigurationManager {
 public:
-    ConfigurationManager(const std::string& config_file_name, const std::string& config_dir);
+    ConfigurationManager(
+        ILogger &logger,
+        const std::string &config_file_name,
+        const std::string &config_dir
+    );
 
     PingerResult load_file();
     PingerResult deserialize_configuration();
@@ -32,6 +37,8 @@ private:
     std::string _raw_config;
     std::unique_ptr<json> _serialized_config;
     std::shared_ptr<Configuration> _config;
+
+    ILogger& _logger;
 };
 
 

@@ -6,9 +6,11 @@
 
 
 ConfigurationManager::ConfigurationManager(
+    ILogger& logger,
     const std::string& config_file_name = CONFIGURATION_FILENAME,
     const std::string& config_dir = CONFIGURATION_DIRECTORY
-) {
+) : _logger(logger)
+{
     _config_file_name = config_file_name;
     _config_dir = config_dir;
     _config = nullptr;

@@ -13,5 +13,8 @@ using curl::curlcpp_traceback;
 // [] Retrieve open application data from the system
 
 int main() {
+    Logger logger(LoggerMode::CONSOLE);
+    logger.log(LOG_INFO, "Starting up...");
+
     return 0;
 }

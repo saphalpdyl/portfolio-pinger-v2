@@ -1,6 +1,7 @@
 #include "logger.h"
 
-Logger::Logger(const LoggerMode mode) : _mode(mode) {
+Logger::Logger(const LoggerMode mode) {
+  _mode = mode;
   if ( mode == LoggerMode::SYSLOG ) {
     openlog(PINGER_CONFIG_SYSLOG_IDENT, LOG_PID | LOG_CONS, LOG_USER);
   }
@@ -21,7 +22,7 @@ void Logger::log(const int log_level, const std::string &message) {
   }
 }
 
-std::string Logger::get_log_prefix(const int log_level) {
+std::string ILogger::get_log_prefix(const int log_level) {
   switch (log_level) {
     case LOG_EMERG:
       return "EMERGENCY: ";

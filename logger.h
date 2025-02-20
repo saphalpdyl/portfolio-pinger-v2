@@ -15,6 +15,10 @@ class ILogger {
 public:
   virtual ~ILogger() = default;
   virtual void log(int log_level, const std::string& message) = 0;
+
+protected:
+  LoggerMode _mode = LoggerMode::SYSLOG;
+  static std::string get_log_prefix(int log_level);
 };
 
 class Logger final : public ILogger {
@@ -23,10 +27,6 @@ public:
   ~Logger() override;
 
   void log( int log_level, const std::string& message) override;
-
-private:
-  static std::string get_log_prefix(int log_level);
-  LoggerMode _mode;
 };
 
 #endif //LOGGER_H
