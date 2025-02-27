@@ -15,6 +15,8 @@ add_executable(portfolio_pinger main.cpp
         configuration.h
         process_target.h
         process_target_result.h
+        process_extractor.cpp
+        process_extractor.h
 )
 
 add_executable(
@@ -23,6 +25,10 @@ add_executable(
         configuration_manager_test.cpp
         configuration_manager.h
         configuration_manager.cpp
+        process_extractor.cpp
+        process_extractor.h
+        process_extractor_helper.h
+        process_extractor_helper.cpp
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
