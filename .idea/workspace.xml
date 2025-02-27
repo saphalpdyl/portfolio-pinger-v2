@@ -32,14 +32,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcc3dc8-f06f-4bfe-b5fa-cdac9801350e" name="Changes" comment="add: create README.md for Portfolio Process Pinger application">
-      <change afterPath="$PROJECT_DIR$/process_extractor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_extractor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_extractor_helper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_extractor_helper.h" afterDir="false" />
+    <list default="true" id="6fcc3dc8-f06f-4bfe-b5fa-cdac9801350e" name="Changes" comment="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management">
+      <change afterPath="$PROJECT_DIR$/command_executor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/command_executor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_extractor_helper_test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_extractor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_extractor.h" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_extractor_helper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor_helper.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_extractor_helper.h" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor_helper.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +116,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.portfolio_pinger">
+  <component name="RunManager" selected="Google Test.GoogleTests_run">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -149,7 +151,7 @@
       <updated>1740017956913</updated>
       <workItem from="1740017958000" duration="10786000" />
       <workItem from="1740220210240" duration="15000" />
-      <workItem from="1740628686419" duration="1154000" />
+      <workItem from="1740628686419" duration="3100000" />
     </task>
     <task id="LOCAL-00001" summary="add: implement logger class with syslog support and update CMakeLists.txt">
       <option name="closed" value="true" />
@@ -191,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740031081325</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management">
+      <option name="closed" value="true" />
+      <created>1740630287507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740630287507</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +218,7 @@
     <MESSAGE value="change: replace std::cerr with the custom logger class" />
     <MESSAGE value="refactor: introduce IConfigurationManager interface and update ConfigurationManager implementation" />
     <MESSAGE value="add: create README.md for Portfolio Process Pinger application" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: create README.md for Portfolio Process Pinger application" />
+    <MESSAGE value="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management" />
   </component>
 </project>

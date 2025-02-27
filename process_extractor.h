@@ -9,11 +9,6 @@
 
 class IProcessExtractor {
 public:
-    explicit IProcessExtractor(
-        std::shared_ptr<ConfigurationManager> configuration_manager,
-        std::shared_ptr<ProcessExtractorHelpers> process_extractor_helpers
-    );
-
     virtual ~IProcessExtractor() = default;
 
     [[nodiscard]] virtual std::vector<ProcessTargetResult> get_process_targets() const = 0;

@@ -3,26 +3,26 @@
 
 #include <string>
 
+#include "command_executor.h"
 #include "logger.h"
+#include "process_target_result.h"
 
 class IProcessExtractorHelpers {
 public:
     virtual ~IProcessExtractorHelpers() = default;
 
-    virtual std::string exec(const char* cmd) = 0;
-    virtual std::string get_service_status(const std::string& process_name) = 0;
+    virtual bool get_process_is_running(const std::string& process_name) = 0;
 };
 
 class ProcessExtractorHelpers final: public IProcessExtractorHelpers {
 public:
-    explicit ProcessExtractorHelpers(ILogger &logger);
+    explicit ProcessExtractorHelpers(ILogger &logger, ICommandExecutor& command_executor);
 
-    std::string exec(const char *cmd) override;
-    std::string get_service_status(const std::string& process_name) override;
+    bool get_process_is_running(const std::string& process_name) override;
 
 private:
     ILogger& _logger;
-
+    ICommandExecutor& _command_executor;
 };
 
 
