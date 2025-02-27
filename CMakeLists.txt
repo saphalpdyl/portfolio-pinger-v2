@@ -29,6 +29,9 @@ add_executable(
         process_extractor.h
         process_extractor_helper.h
         process_extractor_helper.cpp
+        process_extractor_helper_test.cpp
+        command_executor.cpp
+        command_executor.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
@@ -38,4 +41,4 @@ find_package(GTest REQUIRED)
 find_package(curlcpp REQUIRED)
 
 target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp nlohmann_json::nlohmann_json)
-target_link_libraries(GoogleTests_run PRIVATE GTest::GTest GTest::gtest_main)
+target_link_libraries(GoogleTests_run PRIVATE GTest::GTest GTest::gtest_main GTest::gmock_main)
