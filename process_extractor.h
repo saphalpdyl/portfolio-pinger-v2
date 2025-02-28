@@ -12,20 +12,23 @@ public:
     virtual ~IProcessExtractor() = default;
 
     [[nodiscard]] virtual std::vector<ProcessTargetResult> get_process_targets() const = 0;
-private:
-    std::shared_ptr<ConfigurationManager> _configuration_manager;
-    std::shared_ptr<ProcessExtractorHelpers> _process_extractor_helpers;
 };
 
 class ProcessExtractor final : public IProcessExtractor {
 public:
     ProcessExtractor(
-        std::shared_ptr<ConfigurationManager> configuration_manager,
-        std::shared_ptr<ProcessExtractorHelpers> process_extractor_helpers
+        ILogger& logger,
+        IConfigurationManager& configuration_manager,
+        IProcessExtractorHelpers& process_extractor_helpers
         );
     ~ProcessExtractor() override = default;
 
     [[nodiscard]] std::vector<ProcessTargetResult> get_process_targets() const override;
+
+private:
+    IConfigurationManager& _configuration_manager;
+    IProcessExtractorHelpers& _process_extractor_helpers;
+    ILogger& _logger;
 };
 
 

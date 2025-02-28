@@ -9,7 +9,6 @@
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
     <option name="/Default/Housekeeping/RefactoringsMru/RenameRefactoring/DoRenameFile/@EntryValue" value="false" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -32,16 +31,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcc3dc8-f06f-4bfe-b5fa-cdac9801350e" name="Changes" comment="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management">
-      <change afterPath="$PROJECT_DIR$/command_executor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/command_executor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_extractor_helper_test.cpp" afterDir="false" />
+    <list default="true" id="6fcc3dc8-f06f-4bfe-b5fa-cdac9801350e" name="Changes" comment="add: implement unit tests for ProcessExtractorHelpers using Google Test framework">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process_extractor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process_extractor.h" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_extractor_helper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor_helper.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_extractor_helper.h" beforeDir="false" afterPath="$PROJECT_DIR$/process_extractor_helper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_target_result.h" beforeDir="false" afterPath="$PROJECT_DIR$/process_target_result.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +65,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/configuration_manager_test.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/saphal69/programming/cpp/07-portfolio-pinger-daemon/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="QkCf8YwK" />
@@ -116,16 +117,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Google Test.GoogleTests_run">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="CMake Application.portfolio_pinger">
     <configuration name="GoogleTests_run" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="portfolio_pinger" TARGET_NAME="GoogleTests_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="portfolio_pinger" RUN_TARGET_NAME="GoogleTests_run" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="portfolio_pinger" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="portfolio_pinger" TARGET_NAME="portfolio_pinger" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="portfolio_pinger" RUN_TARGET_NAME="portfolio_pinger">
@@ -151,7 +152,8 @@
       <updated>1740017956913</updated>
       <workItem from="1740017958000" duration="10786000" />
       <workItem from="1740220210240" duration="15000" />
-      <workItem from="1740628686419" duration="3100000" />
+      <workItem from="1740628686419" duration="3734000" />
+      <workItem from="1740712987636" duration="3912000" />
     </task>
     <task id="LOCAL-00001" summary="add: implement logger class with syslog support and update CMakeLists.txt">
       <option name="closed" value="true" />
@@ -201,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740630287507</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add: implement CommandExecutor and update ProcessExtractorHelpers for process management">
+      <option name="closed" value="true" />
+      <created>1740632101050</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740632101050</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add: implement CommandExecutor and update ProcessExtractorHelpers for process management">
+      <option name="closed" value="true" />
+      <created>1740632105886</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740632105886</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +230,17 @@
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add: implement logger class with syslog support and update CMakeLists.txt" />
     <MESSAGE value="change: refactor ConfigurationManager to accept ILogger dependency and enhance unit tests with mock logger&#10;&#10;change: TEST moved to TEST_F Test fixtures for better tests handling" />
@@ -219,6 +248,7 @@
     <MESSAGE value="refactor: introduce IConfigurationManager interface and update ConfigurationManager implementation" />
     <MESSAGE value="add: create README.md for Portfolio Process Pinger application" />
     <MESSAGE value="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: implement ProcessExtractor and ProcessExtractorHelpers classes for process management" />
+    <MESSAGE value="add: implement CommandExecutor and update ProcessExtractorHelpers for process management" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: implement CommandExecutor and update ProcessExtractorHelpers for process management" />
   </component>
 </project>

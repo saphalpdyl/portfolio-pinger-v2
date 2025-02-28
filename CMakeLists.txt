@@ -17,6 +17,10 @@ add_executable(portfolio_pinger main.cpp
         process_target_result.h
         process_extractor.cpp
         process_extractor.h
+        process_extractor_helper.cpp
+        process_extractor_helper.h
+        command_executor.cpp
+        command_executor.h
 )
 
 add_executable(

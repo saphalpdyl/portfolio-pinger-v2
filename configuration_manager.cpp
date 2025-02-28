@@ -26,7 +26,7 @@ PingerResult ConfigurationManager::load_file()
     std::ifstream cF(_config_dir + "/" + _config_file_name);
 
     if (!cF.is_open()) {
-        _logger.log(LOG_ERR, "Configuration file not found");
+        _logger.log(LOG_ERR, "Configuration file " + _config_dir + "/" + _config_file_name + " not found");
         return PingerResult::ERR_CONFIGURATION_FILE_NOT_FOUND;
     }
 
