@@ -24,6 +24,8 @@ add_executable(portfolio_pinger main.cpp
         network_interface.h
         network_interface.cpp
         jsonable.h
+        webhook_server.cpp
+        webhook_server.h
 )
 
 add_executable(
@@ -42,6 +44,8 @@ add_executable(
         network_interface.cpp
         network_interface.h
         jsonable.h
+        webhook_server.cpp
+        webhook_server.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
@@ -49,6 +53,7 @@ target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 find_package(nlohmann_json REQUIRED)
 find_package(GTest REQUIRED)
 find_package(curlcpp REQUIRED)
+find_package(OpenSSL REQUIRED)
 
-target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp nlohmann_json::nlohmann_json)
+target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp nlohmann_json::nlohmann_json OpenSSL::SSL)
 target_link_libraries(GoogleTests_run PRIVATE GTest::GTest GTest::gtest_main GTest::gmock_main)
