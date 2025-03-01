@@ -38,7 +38,7 @@ add_executable(
         command_executor.h
         network_interface.cpp
         network_interface.h
-        Jsonable.h
+        jsonable.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
