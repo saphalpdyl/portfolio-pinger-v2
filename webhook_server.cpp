@@ -5,6 +5,21 @@
 
 #include <iomanip>
 
+#include "process_payload.h"
+
+PingerResult WebhookServer::send_process_results(std::vector<ProcessTargetResult> &results) {
+    ProcessPayload payload;
+    payload.target_results = results;
+
+    const auto processes_json = payload.get_results_json();
+    const auto hash = create_hash_from_json_string(processes_json.dump());
+
+    payload.hash = hash;
+
+    _network_interface.send_packet<ProcessPayload>(payload, _url);
+    return PingerResult::OK;
+}
+
 // Referenced from https://stackoverflow.com/a/72065940
 // Credit to https://stackoverflow.com/users/925913/andrew-cheong
 std::string WebhookServer::create_hash_from_json_string(const std::string json_data) {
@@ -24,7 +39,7 @@ std::string WebhookServer::create_hash_from_json_string(const std::string json_d
     // Convert hash to hex string
     std::stringstream out;
     for (unsigned int i=0; i < hashLen; i++) {
-        out << std::setfill('0') << std::setw(2) << std::right << std::hex << (int)hash.data()[i];
+        out << std::setfill('0') << std::setw(2) << std::right << std::hex << static_cast<int>(hash[i]);
     }
     return out.str();
 }

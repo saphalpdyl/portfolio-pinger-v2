@@ -26,6 +26,7 @@ add_executable(portfolio_pinger main.cpp
         jsonable.h
         webhook_server.cpp
         webhook_server.h
+        process_payload.h
 )
 
 add_executable(

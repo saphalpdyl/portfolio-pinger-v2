@@ -6,12 +6,14 @@
 
 #include "logger.h"
 #include "network_interface.h"
+#include "process_target_result.h"
 
 using nlohmann::json;
 
 class IWebhookServer {
 public:
     virtual ~IWebhookServer() = default;
+    virtual PingerResult send_process_results(std::vector<ProcessTargetResult>& results) = 0;
 
 protected:
     virtual std::string create_hash_from_json_string(std::string json_data) = 0;
@@ -19,6 +21,8 @@ protected:
 
 class WebhookServer final: public IWebhookServer {
 public:
+    PingerResult send_process_results(std::vector<ProcessTargetResult> &results) override;
+
     explicit WebhookServer(std::string &url, std::string hmac_key, ILogger& logger, INetworkInterface& network_interface)
         : _url(url), _logger(logger), _network_interface(network_interface), _hmac_hash_key(std::move(hmac_key)) {}
 

@@ -10,13 +10,11 @@ using nlohmann::json;
 
 struct ProcessTargetResult final : ProcessTarget, public Jsonable {
     std::string application_name;
-    std::string process_name;
     bool is_running{};
 
     [[nodiscard]] json to_json() const override {
         return json{
             {"application_name", application_name},
-            {"process_name", process_name},
             {"is_running", is_running}
         };
     }

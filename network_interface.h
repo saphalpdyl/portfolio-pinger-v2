@@ -10,9 +10,13 @@
 
 class INetworkInterface {
 public:
-    void send_packet() {
-        throw std::runtime_error("send_packet must be implemented by the derived class");
-    }
+    // Workaround for virtual template method
+    // Credits to: https://stackoverflow.com/a/38719807
+    template <typename T>
+        requires std::is_base_of_v<Jsonable, T>
+    PingerResult send_packet(T packet, const std::string& url) {
+        return this->send_packet<T>(packet, url);
+    };
 };
 
 class NetworkInterface : public INetworkInterface {

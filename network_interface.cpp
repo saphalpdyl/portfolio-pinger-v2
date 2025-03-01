@@ -1,4 +1,6 @@
 #include "network_interface.h"
+
+#include "process_payload.h"
 #include "process_target_result.h"
 
 using curl::curl_easy;
@@ -8,6 +10,7 @@ using curl::curlcpp_traceback;
 using nlohmann::json;
 
 template PingerResult NetworkInterface::send_packet<ProcessTargetResult>(ProcessTargetResult, const std::string&);
+template PingerResult NetworkInterface::send_packet<ProcessPayload>(ProcessPayload, const std::string&);
 
 template<typename T> requires std::is_base_of_v<Jsonable, T>
 PingerResult NetworkInterface::send_packet(T packet, const std::string &url) {
