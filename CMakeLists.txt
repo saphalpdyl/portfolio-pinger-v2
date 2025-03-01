@@ -36,6 +36,9 @@ add_executable(
         process_extractor_helper_test.cpp
         command_executor.cpp
         command_executor.h
+        network_interface.cpp
+        network_interface.h
+        Jsonable.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
