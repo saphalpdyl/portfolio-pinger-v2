@@ -5,6 +5,7 @@
 #include <utility>
 
 #include "logger.h"
+#include "network_interface.h"
 
 using nlohmann::json;
 
@@ -18,14 +19,15 @@ protected:
 
 class WebhookServer final: public IWebhookServer {
 public:
-    explicit WebhookServer(std::string &url, std::string hmac_key, ILogger& logger)
-        : _url(url), _logger(logger), _hmac_hash_key(std::move(hmac_key)) {}
+    explicit WebhookServer(std::string &url, std::string hmac_key, ILogger& logger, INetworkInterface& network_interface)
+        : _url(url), _logger(logger), _network_interface(network_interface), _hmac_hash_key(std::move(hmac_key)) {}
 
-public:
+private:
     std::string create_hash_from_json_string(std::string json_data) override;
 
     std::string& _url;
     ILogger& _logger;
+    INetworkInterface& _network_interface;
     std::string _hmac_hash_key;
 };
 
