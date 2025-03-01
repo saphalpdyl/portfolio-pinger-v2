@@ -7,8 +7,11 @@
 
 #include "process_payload.h"
 
-PingerResult WebhookServer::send_process_results(std::vector<ProcessTargetResult> &results) {
-    ProcessPayload payload;
+template PingerResult WebhookServer<NetworkInterface>::send_process_results(std::vector<ProcessTargetResult>&);
+
+template <typename NI>
+PingerResult WebhookServer<NI>::send_process_results(std::vector<ProcessTargetResult> &results) {
+    ProcessPayload payload{};
     payload.target_results = results;
 
     const auto processes_json = payload.get_results_json();
@@ -16,13 +19,14 @@ PingerResult WebhookServer::send_process_results(std::vector<ProcessTargetResult
 
     payload.hash = hash;
 
-    _network_interface.send_packet<ProcessPayload>(payload, _url);
+    _network_interface.template send_packet<ProcessPayload>(payload, _url);
     return PingerResult::OK;
 }
 
 // Referenced from https://stackoverflow.com/a/72065940
 // Credit to https://stackoverflow.com/users/925913/andrew-cheong
-std::string WebhookServer::create_hash_from_json_string(const std::string json_data) {
+template <typename NI>
+std::string WebhookServer<NI>::create_hash_from_json_string(const std::string json_data) {
     std::array<unsigned char, EVP_MAX_MD_SIZE> hash{};
     unsigned int hashLen;
 

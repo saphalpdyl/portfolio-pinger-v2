@@ -19,11 +19,12 @@ protected:
     virtual std::string create_hash_from_json_string(std::string json_data) = 0;
 };
 
+template <typename NI>
 class WebhookServer final: public IWebhookServer {
 public:
     PingerResult send_process_results(std::vector<ProcessTargetResult> &results) override;
 
-    explicit WebhookServer(std::string &url, std::string hmac_key, ILogger& logger, INetworkInterface& network_interface)
+    explicit WebhookServer(std::string &url, std::string hmac_key, ILogger& logger, INetworkInterface<NI>& network_interface)
         : _url(url), _logger(logger), _network_interface(network_interface), _hmac_hash_key(std::move(hmac_key)) {}
 
 private:
@@ -31,7 +32,7 @@ private:
 
     std::string& _url;
     ILogger& _logger;
-    INetworkInterface& _network_interface;
+    INetworkInterface<NI> & _network_interface;
     std::string _hmac_hash_key;
 };
 
