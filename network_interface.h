@@ -2,14 +2,15 @@
 #define NETWORK_INTERFACE_H
 
 #include <stdexcept>
+#include <curlcpp/curl_easy.h>
+#include <nlohmann/json.hpp>
 
 #include "errors.h"
-
-class Jsonable;
+#include "jsonable.h"
 
 class INetworkInterface {
 public:
-    void send_packet(auto packet) {
+    void send_packet() {
         throw std::runtime_error("send_packet must be implemented by the derived class");
     }
 };

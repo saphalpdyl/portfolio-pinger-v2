@@ -21,6 +21,9 @@ add_executable(portfolio_pinger main.cpp
         process_extractor_helper.h
         command_executor.cpp
         command_executor.h
+        network_interface.h
+        network_interface.cpp
+        jsonable.h
 )
 
 add_executable(
