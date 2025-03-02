@@ -38,6 +38,7 @@ TEST_F(CommanderTest, NoArgumentsReturnsFailure) {
     constexpr int argc = 1;
 
     // Expect the logger to be called with error message
+    testing::Mock::AllowLeak(&logger);
     EXPECT_CALL(logger, log(LOG_ERR, "No command provided"))
         .Times(1);
 
