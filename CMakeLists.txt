@@ -58,6 +58,8 @@ add_executable(
         service_manager.h
         commander.cpp
         commander.h
+        logger.cpp
+        logger.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
@@ -68,4 +70,4 @@ find_package(curlcpp REQUIRED)
 find_package(OpenSSL REQUIRED)
 
 target_link_libraries(portfolio_pinger PRIVATE curlcpp::curlcpp nlohmann_json::nlohmann_json OpenSSL::SSL)
-target_link_libraries(GoogleTests_run PRIVATE GTest::GTest GTest::gtest_main GTest::gmock_main)
+target_link_libraries(GoogleTests_run PRIVATE GTest::GTest GTest::gtest_main GTest::gmock_main OpenSSL::SSL curlcpp::curlcpp)
