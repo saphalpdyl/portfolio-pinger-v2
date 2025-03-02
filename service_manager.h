@@ -11,8 +11,8 @@ public:
     virtual ~IServiceManager() = default;
 
     [[nodiscard]] virtual bool install_service() = 0;
-    [[nodiscard]] virtual bool uninstall_service() const = 0;
-    [[nodiscard]] virtual bool run_service() const = 0;
+    [[nodiscard]] virtual bool uninstall_service() = 0;
+    [[nodiscard]] virtual bool run_service() = 0;
 };
 
 class ServiceManager final: public IServiceManager {
@@ -22,8 +22,8 @@ public:
 
 private:
     bool install_service() override;
-    [[nodiscard]] bool uninstall_service() const override;
-    [[nodiscard]] bool run_service() const override;
+    [[nodiscard]] bool uninstall_service() override;
+    [[nodiscard]] bool run_service() override;
 
     static std::string get_executable_path();
 

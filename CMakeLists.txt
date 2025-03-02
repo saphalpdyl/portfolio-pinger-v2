@@ -60,6 +60,7 @@ add_executable(
         commander.h
         logger.cpp
         logger.h
+        commander_test.cpp
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 

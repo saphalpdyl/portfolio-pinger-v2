@@ -49,7 +49,7 @@ bool ServiceManager::install_service() {
     return true;
 }
 
-bool ServiceManager::uninstall_service() const {
+bool ServiceManager::uninstall_service() {
     _logger.log(LOG_INFO, "Uninstalling service...");
 
     const std::vector<std::string> commands = {
@@ -72,7 +72,7 @@ bool ServiceManager::uninstall_service() const {
     return true;
 }
 
-bool ServiceManager::run_service() const {
+bool ServiceManager::run_service() {
     Logger logger(LoggerMode::SYSLOG);
     logger.log(LOG_INFO, "Running service...");
 
