@@ -14,8 +14,8 @@ struct ProcessTargetResult final : ProcessTarget, public Jsonable {
 
     [[nodiscard]] json to_json() const override {
         return json{
-            {"application_name", application_name},
-            {"is_running", is_running}
+            {"appName", application_name},
+            {"isRunning", is_running}
         };
     }
 };

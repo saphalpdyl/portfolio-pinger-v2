@@ -28,7 +28,7 @@ public:
     [[nodiscard]] json to_json() const override {
         return json{
             {"hash", hash},
-            {"processes", get_results_json()}
+            {"payload", get_results_json()}
         };
     }
 };
