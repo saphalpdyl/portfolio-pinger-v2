@@ -27,9 +27,14 @@ add_executable(portfolio_pinger main.cpp
         webhook_server.cpp
         webhook_server.h
         process_payload.h
+        service_manager.cpp
+        service_manager.h
+        commander.cpp
+        commander.h
 )
 
 add_definitions(-DENV_SERVICE_NAME="portfolio-process-monitor")
+add_definitions(-DCONFIGURATION_HOME_DIRECTORY="/etc/portfolio-process-monitor")
 
 add_executable(
         GoogleTests_run
@@ -51,6 +56,8 @@ add_executable(
         webhook_server.h
         service_manager.cpp
         service_manager.h
+        commander.cpp
+        commander.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 

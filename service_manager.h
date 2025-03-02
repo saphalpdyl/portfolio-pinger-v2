@@ -6,25 +6,32 @@
 
 const std::string SERVICE_NAME = ENV_SERVICE_NAME;
 
-class DaemonManager {
+class IServiceManager {
 public:
-    DaemonManager(Logger& logger, CommandExecutor& cmd_exec, ConfigurationManager& cfg_mgr)
+    virtual ~IServiceManager() = default;
+
+    [[nodiscard]] virtual bool install_service() = 0;
+    [[nodiscard]] virtual bool uninstall_service() const = 0;
+    [[nodiscard]] virtual bool run_service() const = 0;
+};
+
+class ServiceManager final: public IServiceManager {
+public:
+    ServiceManager(Logger& logger, CommandExecutor& cmd_exec, ConfigurationManager& cfg_mgr)
         : _logger(logger), _command_executor(cmd_exec), _config_manager(cfg_mgr) {}
 
-    bool process_command(const std::string& command);
-
 private:
-    bool install_service();
-    [[nodiscard]] bool uninstall_service() const;
-    bool run_service() const;
+    bool install_service() override;
+    [[nodiscard]] bool uninstall_service() const override;
+    [[nodiscard]] bool run_service() const override;
 
     static std::string get_executable_path();
 
     static bool write_file(const std::string& path, const std::string& content);
 
-    Logger& _logger;
-    CommandExecutor& _command_executor;
-    ConfigurationManager& _config_manager;
+    ILogger& _logger;
+    ICommandExecutor& _command_executor;
+    IConfigurationManager& _config_manager;
 };
 
 

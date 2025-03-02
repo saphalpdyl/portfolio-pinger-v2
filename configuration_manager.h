@@ -18,6 +18,10 @@ public:
 
     [[nodiscard]] virtual std::shared_ptr<Configuration> get_configuration() const = 0;
 
+    virtual PingerResult load_file() = 0;
+    virtual PingerResult deserialize_configuration() = 0;
+    virtual PingerResult parse_configuration() = 0;
+
 protected:
     std::shared_ptr<Configuration> _config;
 };
@@ -32,9 +36,9 @@ public:
 
     explicit ConfigurationManager(ILogger &logger);
 
-    PingerResult load_file();
-    PingerResult deserialize_configuration();
-    PingerResult parse_configuration();
+    PingerResult load_file() override;
+    PingerResult deserialize_configuration() override;
+    PingerResult parse_configuration() override;
 
     [[nodiscard]] std::shared_ptr<Configuration> get_configuration() const override;
 

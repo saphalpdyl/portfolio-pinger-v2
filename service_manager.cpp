@@ -9,8 +9,8 @@
 #include "webhook_server.h"
 
 
-bool DaemonManager::install_service() {
-    _logger.log(LOG_INFO, "INstalling service...");
+bool ServiceManager::install_service() {
+    _logger.log(LOG_INFO, "Installing service...");
 
     const std::string service_path = "/etc/systemd/system/" + SERVICE_NAME + ".service";
     const std::string exec_path = get_executable_path();
@@ -49,7 +49,7 @@ bool DaemonManager::install_service() {
     return true;
 }
 
-bool DaemonManager::uninstall_service() const {
+bool ServiceManager::uninstall_service() const {
     _logger.log(LOG_INFO, "Uninstalling service...");
 
     const std::vector<std::string> commands = {
@@ -72,23 +72,24 @@ bool DaemonManager::uninstall_service() const {
     return true;
 }
 
-bool DaemonManager::run_service() const {
-    _logger.log(LOG_INFO, "Running service...");
+bool ServiceManager::run_service() const {
+    Logger logger(LoggerMode::SYSLOG);
+    logger.log(LOG_INFO, "Running service...");
 
     _config_manager.load_file();
     _config_manager.deserialize_configuration();
     _config_manager.parse_configuration();
 
     if ( _config_manager.get_configuration() == nullptr ) {
-        _logger.log(LOG_ERR, "Couldn't load configuration.");
+        logger.log(LOG_ERR, "Couldn't load configuration.");
         return false;
     }
 
-    ProcessExtractorHelpers process_extractor_helpers(_logger, _command_executor);
-    const ProcessExtractor process_extractor(_logger, _config_manager, process_extractor_helpers);
+    ProcessExtractorHelpers process_extractor_helpers(logger, _command_executor);
+    const ProcessExtractor process_extractor(logger, _config_manager, process_extractor_helpers);
 
     NetworkInterface network_interface;
-    WebhookServer webhook_server(_logger, network_interface, _config_manager);
+    WebhookServer webhook_server(logger, network_interface, _config_manager);
 
     while (true) {
         try {
@@ -97,13 +98,13 @@ bool DaemonManager::run_service() const {
 
             std::this_thread::sleep_for(std::chrono::milliseconds(_config_manager.get_configuration()->ping_interval));
         } catch ( const std::exception& e ) {
-            _logger.log(LOG_ERR, "Error in service loop: " + std::string(e.what()));
+            logger.log(LOG_ERR, "Error in service loop: " + std::string(e.what()));
             std::this_thread::sleep_for(std::chrono::seconds(5));
         }
     }
 }
 
-std::string DaemonManager::get_executable_path() {
+std::string ServiceManager::get_executable_path() {
     char buff[PATH_MAX];
     if (const ssize_t len = readlink("/proc/self/exe", buff, sizeof(buff) - 1); len != -1) {
         buff[len] = '\0';
@@ -112,7 +113,7 @@ std::string DaemonManager::get_executable_path() {
     return "/usr/local/bin/" + SERVICE_NAME; // Fallback
 }
 
-bool DaemonManager::write_file(const std::string &path, const std::string &content) {
+bool ServiceManager::write_file(const std::string &path, const std::string &content) {
     std::ofstream file(path);
     if (!file.is_open()) {
         return false;
