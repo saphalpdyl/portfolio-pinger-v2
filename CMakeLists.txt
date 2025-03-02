@@ -29,6 +29,8 @@ add_executable(portfolio_pinger main.cpp
         process_payload.h
 )
 
+add_definitions(-DENV_SERVICE_NAME="portfolio-process-monitor")
+
 add_executable(
         GoogleTests_run
         main_test.cpp
@@ -47,6 +49,8 @@ add_executable(
         jsonable.h
         webhook_server.cpp
         webhook_server.h
+        service_manager.cpp
+        service_manager.h
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 

@@ -19,7 +19,7 @@ PingerResult WebhookServer<NI>::send_process_results(std::vector<ProcessTargetRe
 
     payload.hash = hash;
 
-    _network_interface.template send_packet<ProcessPayload>(payload, _url);
+    _network_interface.template send_packet<ProcessPayload>(payload, _configuration_manager.get_configuration()->target_url);
     return PingerResult::OK;
 }
 
@@ -32,8 +32,8 @@ std::string WebhookServer<NI>::create_hash_from_json_string(const std::string js
 
     HMAC(
         EVP_sha256(),
-        _hmac_hash_key.data(),
-        static_cast<int>(_hmac_hash_key.size()),
+        _configuration_manager.get_configuration()->authorization_secret.data(),
+        static_cast<int>(_configuration_manager.get_configuration()->authorization_secret.size()),
         reinterpret_cast<unsigned char const*>(json_data.data()),
         static_cast<int>(json_data.size()),
         hash.data(),
