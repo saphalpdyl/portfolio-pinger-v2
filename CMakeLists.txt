@@ -61,6 +61,7 @@ add_executable(
         logger.cpp
         logger.h
         commander_test.cpp
+        webhook_server_test.cpp
 )
 target_compile_definitions(GoogleTests_run PRIVATE TESTING)
 
