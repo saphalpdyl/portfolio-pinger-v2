@@ -5,7 +5,13 @@ A C++ application that sends process status information to my website for the "A
 ![image](https://github.com/user-attachments/assets/ddd1fbf9-1229-4208-b37c-a3a5de22899e)
 
 ## Installation
-Build the project with CMake and then follow up with these commands:
+Build the project with CMake.
+```bash
+mkdir build && cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=<path_to_vcpkg_installation>/vcpkg/scripts/buildsystems/vcpkg.cmake
+```
+
+Then, follow up with these commands:
 - `install`: Registers the systemd service
 - `uninstall`: Completely uninstalls the service from the machine
 - `run`: Internally used by systemd to run the service
