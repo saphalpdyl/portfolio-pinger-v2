@@ -2,7 +2,7 @@
 
 A C++ application that sends process status information to my website for the "Apps running on my machine" section.
 
-![image](https://github.com/user-attachments/assets/ddd1fbf9-1229-4208-b37c-a3a5de22899e)
+![image](https://github.com/user-attachments/assets/d247e23b-5797-46e8-bcb2-4a30635c0267)
 
 ## Installation
 Build the project with CMake.
@@ -67,7 +67,9 @@ add_definitions(-DCONFIGURATION_HOME_DIRECTORY="/path/to/config")
 }
 ```
 
-## How It Works
+## How It Works: Deprecated
+
+![image](https://github.com/user-attachments/assets/ddd1fbf9-1229-4208-b37c-a3a5de22899e)
 
 The application monitors specified processes on my local machine and sends heartbeat signals to my portfolio website every 2 seconds. The implementation follows these steps:
 
